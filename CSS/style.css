@@ -1,0 +1,14 @@
+
+/*general */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*header*/
+
+.my-banner {
+    display: block;
+    width: 100%;
+}
