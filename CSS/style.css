@@ -4,11 +4,13 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 html {
     font-size: 100%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+    height: 100%
   }
   
   * {
@@ -19,23 +21,69 @@ html {
 
 a {
     text-decoration: none;
+    color: white;
 }  
 
 li{
     list-style: none;
 }
 
+
 /*header*/
+
+header {
+    position: relative;
+    height: 100%;
+}
 
 nav {
     position: fixed;
     width: 100%;
-    background: rgba(0, 0, 0,.5)
+    background: rgba(0, 0, 0,.5);
+    z-index: 1;
+}
+
+.my-header-content{
+    height: 100%;
+}
+
+.header-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.616);
+    color: white;
+    font-size: 2.7rem;     
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+
+}
+
+.my-arrow{
+    display: inline-block;
+    padding: 20px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.my-arrow:hover{
+    opacity: .5;
 }
 
 .my-banner {
     display: block;
     width: 100%;
+    min-height: 100%;
+    background-image: url("/IMG/computer-2982270_1920.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .my-container{
@@ -45,6 +93,16 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     box-sizing: border-box;
+}
+
+.my-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0,.5);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
 }
 
 .align-center{
@@ -168,4 +226,27 @@ nav h1 a:hover {
     color: #fa9216;
   }
 
-  
+  /*Animation */
+
+  @keyframes blink-caret {
+    from, to { border-color: white }
+    50% { border-color: transparent; }
+  }
+
+  .my-pulsate {
+      -webkit-animation: pulsate 2s ease-in-out;
+      -webkit-animation-iteration-count: infinite;
+      opacity: .3;
+  }
+
+  @-webkit-keyframes pulsate {
+      0% {
+        opacity: .3;
+      }
+      50% {
+          opacity: 1;
+      }
+      100% {
+          opacity: .3;
+      }
+  }
