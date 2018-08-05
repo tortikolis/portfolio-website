@@ -1,0 +1,252 @@
+
+/*general */
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    height: 100%
+  }
+  
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+a {
+    text-decoration: none;
+    color: white;
+}  
+
+li{
+    list-style: none;
+}
+
+
+/*header*/
+
+header {
+    position: relative;
+    height: 100%;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0,.5);
+    z-index: 1;
+}
+
+.my-header-content{
+    height: 100%;
+}
+
+.header-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.616);
+    color: white;
+    font-size: 2.7rem;     
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+
+}
+
+.my-arrow{
+    display: inline-block;
+    padding: 20px;
+    border: solid #fa9216;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.my-arrow:hover{
+    opacity: .5;
+}
+
+.my-banner {
+    display: block;
+    width: 100%;
+    min-height: 100%;
+    background-image: url("/IMG/computer-2982270_1920.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.my-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.my-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0,.5);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.align-center{
+    align-items: center;
+}
+header nav ul {
+    display: flex;
+    order: 2;
+}
+
+header nav ul li {
+    padding: 10px;
+}
+
+header nav ul li a {
+    color: white;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+header nav ul li a:after {
+    content:'';
+    display: block;
+    height: 4px;
+    width: 0px;
+    opacity: 0;
+    margin-top: 5px;
+    background-color: #fa9216;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+header nav ul li a:hover {
+    color: #fa9216;
+    /*border-bottom: 3px solid #fa9216;*/
+}
+
+header nav ul li a:hover:after{
+    width: 100%;
+    opacity: 2
+}
+
+/* logo */
+
+nav h1 {
+    font-family:'Lato', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  
+nav h1 a {
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    color: #569aef;
+  }
+  
+nav h1 a:hover {
+    color: #fa9216;
+  }
+  
+  .title {
+    float: left;
+    width: 33.3333%;
+    margin: 0;
+    padding: 0.75rem 1rem;
+    line-height: 1.1;
+    font-size: 2.875rem;
+  }
+  
+  .title a {
+    display: block;
+    width: 4.75rem;
+    height: 4.75rem;
+    padding: 0.625rem 0.5rem 0.5rem 0.625rem;
+    border-radius: 50%;
+    border: 0.125rem solid #fcfbfa;
+    -webkit-transition: width 200ms ease;
+    transition: width 200ms ease;
+    color: rgba(238, 238, 238, 0.94);
+  }
+  
+  .title a:hover {
+    width: 18.75rem;
+    padding: 0.625rem 0.625rem 0.625rem 1.375rem;
+    border: none;
+  }
+  
+  .name b, .name span {
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+    letter-spacing: -1.5475rem;
+    font-weight: 300;
+    color: #ffffff;
+  }
+  
+  .title a:hover .name b {
+    letter-spacing: 0;
+    font-weight: 300;
+  }
+  
+  .name span {
+    opacity: 0;
+  }
+  .last b{
+      color: #fa9216;
+  }
+  .title a:hover .name span {
+    letter-spacing: 0;
+    text-transform: none;
+    opacity: 1;
+  }
+  
+  .title a:hover .first b, .title a:hover .first span {
+    color: rgb(255, 255, 255);
+  }
+  
+  .title a:hover .last b, .title a:hover .last span {
+    color: #fa9216;
+  }
+
+  /*Animation */
+
+  @keyframes blink-caret {
+    from, to { border-color: white }
+    50% { border-color: transparent; }
+  }
+
+  .my-pulsate {
+      -webkit-animation: pulsate 2s ease-in-out;
+      -webkit-animation-iteration-count: infinite;
+      opacity: .3;
+  }
+
+  @-webkit-keyframes pulsate {
+      0% {
+        opacity: .3;
+      }
+      50% {
+          opacity: 1;
+      }
+      100% {
+          opacity: .3;
+      }
+  }
