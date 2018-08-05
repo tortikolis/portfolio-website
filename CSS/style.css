@@ -65,7 +65,7 @@ nav {
 .my-arrow{
     display: inline-block;
     padding: 20px;
-    border: solid white;
+    border: solid #fa9216;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
     cursor: pointer;
