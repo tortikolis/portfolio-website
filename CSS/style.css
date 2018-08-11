@@ -22,7 +22,10 @@ a {
     text-decoration: none;
     color: white;
 }  
-
+ul {
+    margin: 0;
+    padding: 0;
+}
 li{
     list-style: none;
 }
@@ -33,7 +36,9 @@ h3 {
     font-size: 40px;
     margin: 0 0 100px 0;
 }
-
+h4 {
+    color: white;
+}
 .my-container{
     width: 100%;
     max-width: 1200px;
@@ -41,6 +46,16 @@ h3 {
     box-sizing: border-box;   
 }
 
+.flex-center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about {
+    padding: 120px 0;
+}
 /*header*/
 
 header {
@@ -101,16 +116,6 @@ nav {
 .header-flex{
     display: flex;
     justify-content: space-between;
-}
-
-.my-layer{
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0,.5);
-    width: 100%;
-    height: 100%;
-    z-index: 100;
 }
 
 .align-center{
@@ -235,13 +240,8 @@ nav h1 a:hover {
   }
 
   /*About*/
-.my-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 120px;
-}
+
+
 
 .icons{
     display: flex;
@@ -287,6 +287,12 @@ h3 span {
     color: #fa9216;
 }
 
+.skills ul {
+    display: flex;
+}
+.skills li {
+    margin-right: 5px;
+}
 .skills{
     margin-top: 30px;
     text-align: center;
@@ -348,9 +354,71 @@ h3 span {
 /*Portfolio*/
 
 #portfolio{
-    background-color: #f7b05b;
-    height: 1000px;
+    
 }
+
+.portfolio-galery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-galery li {
+    position: relative;
+    overflow: hidden;
+    width: 33.333%;
+    padding: 2px;
+    cursor: pointer;   
+}
+
+.portfolio-galery li .my-layer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0,.7);
+}
+
+.portfolio-galery li .my-layer:hover {
+    animation: layer .4s ease;
+    opacity: 1; 
+}
+
+.portfolio-galery li .my-layer ul {
+    display: flex;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+
+.portfolio-galery li .my-layer li {
+    
+    width: max-content;
+    color: white;
+    margin: 1px;
+    border: 2px solid #fa9216;
+    border-radius: 10px;
+}
+
+.portfolio-galery li .my-layer i {
+    display: block;
+    font-size: 400%;
+    text-align: center;
+    color: white;
+   
+}
+
+.portfolio-galery li img {
+    display: block;
+    width: 100%;
+}
+
+
 
   /*Animation */
 
@@ -386,6 +454,19 @@ h3 span {
     100%  { -webkit-filter: grayscale(0%); filter: grayscale(0%); }
 }
 
+@keyframes layer {
+    0%    { -webkit-opacity: 0; opacity: 0; }
+    25%   { -webkit-opacity: .25; opacity: .25;  }
+    50%   { -webkit-opacity: .5; opacity: .5;  }
+    75%   { -webkit-opacity: .75; opacity: .75;  }
+    100%  { -webkit-opacity: 1; opacity: 1;  }
+}
+
 .icons img:hover { 
     animation: toColor 5s;
  }
+
+/*portfolio slide*/
+
+
+
