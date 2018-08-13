@@ -95,6 +95,7 @@ const scrollHandler = location => {
 const init = () => {
     typewriter();
     window.addEventListener("scroll", navOnScroll);
+    navOnScroll();
     onNavClick();
 }
 
