@@ -30,6 +30,10 @@ li{
     list-style: none;
 }
 
+h1 {
+    font-size: 36px;
+}
+
 h3 {
     width: 100%;
     text-align: center;
@@ -53,7 +57,7 @@ h4 {
     align-items: center;
 }
 
-#about {
+#about, #portfolio, #contact {
     padding: 120px 0;
 }
 /*header*/
@@ -66,8 +70,16 @@ header {
 nav {
     position: fixed;
     width: 100%;
-    background: rgba(0, 0, 0,.5);
     z-index: 1;
+    padding: 10px 0;    
+    transition: all .5s ease;
+    
+}
+
+.nav-scroll {
+    background: rgba(0, 0, 0,.6);
+    padding: 0;
+    transition: all .5s ease;
 }
 
 .my-header-content{
@@ -86,7 +98,6 @@ nav {
     color: white;
     font-size: 2.7rem;     
     font-family: 'Lato', Arial, Helvetica, sans-serif;
-
 }
 
 .my-arrow{
@@ -180,18 +191,19 @@ nav h1 a:hover {
   }
   
   .title {
+    /*display: none;*/
     float: left;
     width: 33.3333%;
     margin: 0;
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 1rem;
     line-height: 1.1;
-    font-size: 2.875rem;
+    font-size: 2.5rem;
   }
-  
+  /*.875*/
   .title a {
     display: block;
-    width: 4.75rem;
-    height: 4.75rem;
+    width: 4.2rem;
+    height: 4.2rem;
     padding: 0.625rem 0.5rem 0.5rem 0.625rem;
     border-radius: 50%;
     border: 0.125rem solid #fcfbfa;
@@ -209,7 +221,7 @@ nav h1 a:hover {
   .name b, .name span {
     -webkit-transition: all 200ms ease;
     transition: all 200ms ease;
-    letter-spacing: -1.5475rem;
+    letter-spacing: -1.3475rem;
     font-weight: 300;
     color: #ffffff;
   }
@@ -354,6 +366,7 @@ h3 span {
 /*Portfolio*/
 
 #portfolio{
+    background: #eeeeee;
     
 }
 
@@ -365,9 +378,11 @@ h3 span {
 .portfolio-galery li {
     position: relative;
     overflow: hidden;
-    width: 33.333%;
-    padding: 2px;
-    cursor: pointer;   
+    width: 48%;
+    margin: 1%;
+    cursor: pointer; 
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .portfolio-galery li .my-layer {
@@ -396,13 +411,13 @@ h3 span {
     right: 2px;
 }
 
-.portfolio-galery li .my-layer li {
-    
+.portfolio-galery .my-layer li {
     width: max-content;
     color: white;
     margin: 1px;
     border: 2px solid #fa9216;
     border-radius: 10px;
+    padding: 2px;
 }
 
 .portfolio-galery li .my-layer i {
@@ -418,7 +433,86 @@ h3 span {
     width: 100%;
 }
 
+/*Contact*/
+#contact {
+    padding-bottom: 120px;
+}
 
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#contact form input:not([type="submit"]),
+#contact form textarea {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid rgb(212, 212, 212);
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+#contact form input[type="submit"] {
+    border: 2px solid #fa9216;
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: #fa9216;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none; 
+}
+
+#contact form input[type="submit"]:hover {
+    background-color: #fa9216;
+    color: white;
+}
+
+/*Footer*/
+footer {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background-color: rgb(44, 43, 43);
+}
+
+footer .my-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+footer ul {
+    display: flex;
+}
+
+footer ul a {
+    font-size: 20px;
+    margin: 10px;
+}
+
+footer ul a:hover {
+    color: #fa9216;
+}
+
+footer .footer-logo{
+    font-size: 24px;
+    border: 2px solid white;
+    border-radius: 100%;
+    padding: 5px;
+}
+
+footer a span {
+    color: #fa9216;
+}
 
   /*Animation */
 
@@ -466,7 +560,6 @@ h3 span {
     animation: toColor 5s;
  }
 
-/*portfolio slide*/
 
 
 
