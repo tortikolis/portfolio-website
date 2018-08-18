@@ -21,6 +21,7 @@
 
         <nav>
             <div class="my-container align-center header-flex">
+                
                 <ul class="my-navigation">
                     <li>
                         <a class="selection-link" href="#">Home</a>
@@ -35,6 +36,7 @@
                         <a class="selection-link" href="#contact">Contact</a>
                     </li>
                 </ul>
+                <button class="nav-btn"><i class="fas fa-bars"></i></button>
                 <!--LOGO-->
                 <h1 class="title">
                         <a href="#">
@@ -47,10 +49,8 @@
 
         <section class="my-header-content">
             <div class="header-title">
-                <!--<h1>Hi! I'm Jovica,</h1>
-                <p>front-end developer</p>-->
                 <h1>
-                    <a href="" class="typewrite" data-period="3000" data-type='[ "Hi, my name is Jovica.", "I am front end developer.", "Welcome!" ]'>
+                    <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, my name is Jovica.", "I am front end developer.", "Welcome!" ]'>
                        <span class="wrap"></span>
                     </a>
                 </h1>
@@ -67,30 +67,36 @@
             <h3>
                 <span>A</span>bout me</h3>
 
-            <ul class="icons">
-                <li>
-                    <i class="far fa-lightbulb"></i>
-                </li>
-                <li>
-                    <i class="fas fa-pencil-alt"></i>
-                </li>
-                <li>
+            <div class="icons">
+                
+                <div class="about-img">
                     <img src="IMG/IMG_20180706_191124.jpg">
-                </li>
-                <li>
-                    <i class="fas fa-laptop-code"></i>
-                </li>
-                <li>
-                    <i class="fas fa-rocket"></i>
-                </li>
-            </ul>
+                </div>
+                <div class="fa-icons">
+                    <div>
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <div>
+                        <i class="far fa-lightbulb"></i>
+                    </div>
+                    <div class="about-img-inside">
+                            <img src="IMG/IMG_20180706_191124.jpg">
+                        </div>
+                    <div>
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div>
+                        <i class="fas fa-rocket"></i>
+                    </div>
+            </div>
+            </div>
 
             <div class="profile flex-center-column">
                 <div class="profile-text">
                     <p>
                         <strong>Hello, my name is Jovica.</strong> I'm highly motivated individual looking to establish career as
-                        a first class web developer. Curently I'm available for all sorts of projects, from small scale to
-                        large ones. If you are looking for someone who is going to be devoted and passioned about your project
+                        a first class web developer. Currently I'm available for all sorts of projects, from small scale to
+                        large ones. If you are looking for someone who is going to be fully devoted to your project
                         no matter how big it is then look no further! Here are some of my skills:
                     </p>
                 </div>
@@ -130,44 +136,103 @@
         <div class="my-container my-section">
             <ul class="portfolio-galery">
                 <li>
-                    <div class="my-layer">
-                        <ul>
-                            <li>jQuery</li>
-                            <li>Bootstrap</li>
-                            <li>Sass</li>
-                            <li>Ajax</li>
-                        </ul>
-                        <div><i class="fas fa-plus"></i></div>
-                        <h4>TVShows</h4>
+                    <div class="single-work" data-id="bitbook">
+                        <img src="/IMG/BitBook-small.png" alt="">
+                        <div class="item-hover">
+                            <div class="work-table">
+                                <div class="work-tablecell">
+                                    <div class="hover-content">
+                                        <h4>BitBook</h4>
+                                        <p>(React, Ajax, Materialize)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <img src="IMG/TvShows-small.png" alt="tv-shows-preview">
                 </li>
                 <li>
-                    <div class="my-layer">
-                        <ul>
-                                <li>React</li>
-                                <li>Materialize</li>
-                                <li>Ajax</li>
-                            </ul>
-                            <i class="fas fa-plus"></i>
-                            <h4>BitBook</h4>
+                    <div class="single-work" data-id="tvshows">
+                        <img src="/IMG/TvShows-small.png" alt="">
+                        <div class="item-hover">
+                            <div class="work-table">
+                                <div class="work-tablecell">
+                                    <div class="hover-content">
+                                        <h4>TvShows</h4>
+                                        <p>(jQuery, Ajax, Bootstrap)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <img src="IMG/BitBook-small.png" alt="Bit-book-preview">
                 </li>
                 <li>
-                    <div class="my-layer">
-                        <ul>
-                                <li>React</li>
-                                <li>Materialize</li>
-                                <li>Ajax</li>
-                            </ul>
-                            <i class="fas fa-plus"></i>
-                            <h4>People app</h4>
+                    <div class="single-work" data-id="people">
+                        <img src="/IMG/People-app-small.png" alt="">
+                        <div class="item-hover">
+                            <div class="work-table">
+                                <div class="work-tablecell">
+                                    <div class="hover-content">
+                                        <h4>People-app</h4>
+                                        <p>(React, Ajax, Materialize)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <img src="IMG/People-app-small.png" alt="people-app-preview">
                 </li>
             </ul>
         </div>
+        <div class="modal" id="bitbook">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Project Overview</h4>
+                        <button class="close-modal" data-id="bitbook"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="/IMG/BitBook-small.png" alt="">
+                        <h3 class="project-title">BitBook</h3>
+                        <p class="project-description">Bitbook is Facebook inspired social network app. Users are able to register and log in. They are also able to make tree different kind of posts: image, video and text. Commenting on posts is also supported. There are also sections about site users and their profiles which could be edited. React.js is for building user interface and Materialize is used for design.</p>
+                        <div class="modal-buttons">
+                            <a href="https://github.com/tortikolis/BitBook" target="_blank"><i class="fas fa-code"></i></a>
+                            <a href="https://tortikolis.github.io/BitBook/" target="_blank"><i class="fas fa-desktop"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="tvshows">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Project Overview</h4>
+                        <button class="close-modal" data-id="tvshows"><i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="/IMG/TvShows-small.png" alt="tv shows screenshot">
+                        <h3 class="project-title">TVShows</h3>
+                        <p class="project-description">TVShows is a site that provides info about TV shows. It allows users to search for the series and displays detailed info about searching show (poster, plot, seasons, rating, actors etc.). It also provides a daily schedule of shows on TV. App communicates with the TV Maze API.</p>
+                        <div class="modal-buttons">
+                            <a href="https://github.com/tortikolis/TVShows" target="_blank"><i class="fas fa-code"></i></a>
+                            <a href="https://tortikolis.github.io/TVShows/" target="_blank"><i class="fas fa-desktop"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="modal" id="people">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4>Project Overview</h4>
+                            <button class="close-modal" data-id="people"><i class="fas fa-times"></i></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="/IMG/People-app-small.png" alt="people-app screenshot">
+                            <h3 class="project-title">People-app</h3>
+                            <p class="project-description">People-app is simple aplication that displays users in grid or list mode. Users lists are searchable and provide detailed info about users. React.js is for building user interface and Materialize is used for design.</p>
+                            <div class="modal-buttons">
+                                <a href="https://github.com/tortikolis/people-app" target="_blank"><i class="fas fa-code"></i></a>
+                                <a href="https://tortikolis.github.io/people-app/" target="_blank"><i class="fas fa-desktop"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </section>
 
     <section id="contact">
