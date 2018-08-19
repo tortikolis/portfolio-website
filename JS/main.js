@@ -139,37 +139,14 @@
         })
     }
 
-    const reorderMenuList = () => {
-        const pageWidth = window.innerWidth;
-        const navNode = document.querySelector("nav .my-container");
-        const mobileNav = document.createElement("div");
-        mobileNav.classList.add("mobile-nav");
-        const navigation = document.querySelector(".my-navigation");
-        const navigationInsideMobile = document.querySelector(".mobile-nav ul");
-
-        if(pageWidth <= 800){
-            navNode.insertAdjacentElement("beforeend", mobileNav);
-            mobileNav.insertAdjacentElement("beforeend", navigation);
-            navigation.classList.remove("my-navigation");
-            navigation.classList.add("my-mobile-navigation");   
-        } else {
-            navNode.insertAdjacentElement("afterbegin", navigation);
-            navigation.classList.add("my-navigation");
-            navigation.classList.remove("my-mobile-navigation");
-        }    
-    }
-
     const mobileNavigation = () => {
         const mobileNav = document.querySelector(".mobile-nav")
         const navButton = document.querySelector(".nav-btn");
         
         navButton.addEventListener("click", event => {
-            
-            
-            
+      
             mobileNav.classList.toggle("my-mobile-navigation-opened");
-
-            const buttonI = document.querySelector(".nav-btn i")
+            const buttonI = document.querySelector(".nav-btn i");
 
             if(buttonI.classList.contains("fa-bars")){
                 buttonI.classList.remove("fa-bars");
@@ -187,8 +164,7 @@
         navOnScroll();
         onNavClick();
         onPortfolioImgClick();
-        clickToCloseModal()
-        reorderMenuList();
+        clickToCloseModal();
         mobileNavigation();
     }
 
