@@ -334,6 +334,24 @@ nav h1 a:hover {
 }
 
 /*About*/
+#about {
+    position: relative;
+}
+
+#about::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(/IMG/black-black-and-white-black-white-6663\ \(1\).jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: .7;
+    
+}
 
 .icons {
     display: flex;
@@ -362,6 +380,7 @@ nav h1 a:hover {
     margin: 3.75rem 0.3125rem 0 0.3125rem;
     padding: 0.9375rem;
     border-radius: 100%;
+    background-color: #eeeeee; 
 }
 
 .icons img {
@@ -384,6 +403,11 @@ nav h1 a:hover {
     padding: 0 50px 0 50px;
     font-weight: 300;
     text-indent: 50px;
+    line-height: 1.5;
+}
+
+.profile-text span {
+    background-color: #eeeeee;
 }
 
 h3 span {
