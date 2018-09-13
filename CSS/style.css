@@ -620,7 +620,7 @@ h3 span {
 
 .modal-body {
     padding: 20px;
-    border-top: 1px solid grey;
+    border-top: 1px solid rgb(199, 199, 199);
     color: rgb(51, 51, 51)
 }
 
@@ -652,7 +652,9 @@ h3 span {
     color: white;
     border-radius: 5px;
     margin: 20px;
+    text-align: center;
 }
+
 
 .modal-body img {
     width: 100%;
